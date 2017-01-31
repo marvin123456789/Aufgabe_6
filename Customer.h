@@ -3,8 +3,10 @@
 #define CUSTOMER_H_INCLUDED
 
 #include "Simulation.h"
+#include "Register.h"
 
 namespace Checkout{
+	class Register;
 	class Customer
 	: public odemx::base::Process{
 		public:

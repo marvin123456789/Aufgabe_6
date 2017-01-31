@@ -3,7 +3,7 @@
 
 Checkout::Register::Register(Simulation& sim)
 :queue(sim, "Register queue"),
-cashier(sim, *this, 60 * 6.5){}
+cashier(sim, *this, 6.5){}
 
 
 Checkout::Customer* Checkout::Register::take(){
@@ -13,5 +13,5 @@ Checkout::Customer* Checkout::Register::take(){
 		}
 		
 void Checkout::Register::pay(){
-	//queue.wait();
+	queue.wait();
 }

@@ -16,7 +16,7 @@ namespace Checkout{
 		int id;
 		
 		public:
-		Cashier& cashier;
+		Cashier cashier;
 		Register(Simulation& sim);
 		
 		int getQueueLength() {return queue.getWaitingSlaves().size();}
