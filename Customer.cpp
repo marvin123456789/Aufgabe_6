@@ -16,14 +16,12 @@ Checkout::Customer::selectLane(){
 			best = reg;
 		}
 	}
-	std::cout<<"There's "<<custCount<<" people waiting here\n";
 	return *best;
 }
 
 int Checkout::Customer::main(){
 	Simulation& sim = static_cast<Simulation&>(getSimulation());
 	Register& lane = selectLane();
-	std::cout<< "This lane's ID is: "<<lane.getID()<<std::endl;
 	lane.pay();
 	return 0;
 }

@@ -16,7 +16,7 @@ arrivals(*this, arrivalRateOne, arrivalRateTwo){
 	
 	//create registers
 	for(unsigned int i = 0; i < registerCount; i++){
-		lanes.push_back(new Register(*this));
+		lanes.push_back(new Register(*this,i));
 	}
 }
 

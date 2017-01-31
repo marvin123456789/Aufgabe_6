@@ -38,6 +38,10 @@ int Checkout::CustomerGenerator::main(){
 		}
 		
 		customer = new Customer(static_cast<Simulation&>(getSimulation()));
+		// log event
+		std::cout << '[' << getTime() << "] "
+		          << getLabel() << ": "
+		          << "new customer\n";
 		customers.update();
 		customer->activate();
 	}
